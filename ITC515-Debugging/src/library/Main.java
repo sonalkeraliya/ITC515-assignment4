@@ -59,7 +59,7 @@ public class Main {
 			calendar = calendarHelper.loadCalendar();
 			library = libraryHelper.loadLibrary();
 
-			dateFormat = new SimpleDateFormat("dd/MM/yyyy");
+			dateFormat = new SimpleDateFormat("dd/MM/yyy");
 
 			for (IPatron patron : library.getPatronList()) {
 				output(patron);
