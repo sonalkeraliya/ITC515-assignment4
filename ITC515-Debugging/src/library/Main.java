@@ -223,7 +223,7 @@ public class Main {
 			output("\n" + patron + "\n");
 
 		} catch (NumberFormatException e) {
-			output("\nInvalid phone number\n");
+			output("\nInvalid phone number\n");  
 		}
 
 	}
