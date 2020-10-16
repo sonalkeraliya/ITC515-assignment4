@@ -36,6 +36,7 @@ class TestBug1 {
 	int patronId;
 	int bookId = 1;
 	
+	
 	@BeforeAll
 	static void setUpBeforeClass() throws Exception {
 	}
@@ -75,8 +76,18 @@ class TestBug1 {
 		library.commitLoan(iLoan); // loan one book1 patron1
 		System.out.println("Loan Due Date:" + iLoan.getDueDate());  // print loan due date
 		calendar.incrementDate(3);
-		System.out.println(calendar.getDate()); // print current date
+		library.checkCurrentLoansOverDue();  // update loan related data
+		System.out.println("Current Date:" +calendar.getDate()); // print current date
 		
+		// act
+		double overDueFine = 0.0;
+		if (iLoan.isOverDue()) {
+			overDueFine = library.calculateOverDueFine(iLoan);
+			iLoan.getPatron().incurFine(overDueFine);
+		}
+		System.out.println("Actual Fine:" +overDueFine); // print fine 
+		// assert
+		assertEquals(1.00, overDueFine, 0.00);
 		
 		
 	}
