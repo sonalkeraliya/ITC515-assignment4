@@ -227,8 +227,17 @@ The author put the source code up for it https://github.com/sonalkeraliya/ITC515
     Screenshot:
   
   ![runtest](https://user-images.githubusercontent.com/36131504/127261387-e035e81e-ab88-4f60-8e19-9d162e74a5b1.PNG)
-    
+  
+  
+  
 
+
+**For FrontEndDeveloper :**
+  Request parameter validation : 
+  
+  from_date and to_date must be format of Y-m-d H:i:s.
+  
+  from_timezone and to_timezone must be format of Timezone String Format such as Africa/Asmera
 
 
 
@@ -241,5 +250,6 @@ The author put the source code up for it https://github.com/sonalkeraliya/ITC515
   
   For Calaculating days and Week use third party library Carbon :
   https://carbon.nesbot.com/docs/
-
+   
+   For Timezone String :   https://www.php.net/manual/en/timezones.others.php
 
